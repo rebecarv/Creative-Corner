@@ -34,4 +34,17 @@ document.querySelectorAll(".carousel").forEach((carousel) => {
     items[0].classList.add("carousel__item--selected");
     buttons[0].classList.add("carousel__button--selected");
   });
-  
+
+  // sidebar
+  function toggle() {
+    var nav = document.querySelector("#nav"),
+      btn = document.querySelector("#btn");
+    nav.classList.toggle("open");
+    btn.classList.toggle("is-active");
+  }
+
+
+  // Stars rating
+  $(':radio').change(function() {
+    console.log('New star rating: ' + this.value);
+  });
