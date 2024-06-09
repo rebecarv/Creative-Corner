@@ -1,4 +1,4 @@
-#main-header {
+#main-header .nav {
     padding: 50px;
     background-color: black;
     text-align: center;
@@ -43,6 +43,7 @@
   width: 500px;
   background: rgb(246, 241, 244);
   padding: 1em;
+  border-radius: 2%;
   font-family: "Quicksand", sans-serif;
   font-weight: bold;
   font-size: 2em;
@@ -53,17 +54,6 @@
 
 .carousel__item--selected {
   display: block;
-}
-
-.carousel__img {
-  max-width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 300px;
-  width: 300px;
 }
 
 .carousel__nav {
@@ -87,4 +77,100 @@
 
 .carousel__button--selected {
   background: rgba(112, 109, 109, 0.938);
+}
+
+.rating {
+  display: inline-block;
+  position: relative;
+  height: 50px;
+  line-height: 50px;
+  font-size: 50px;
+}
+
+.rating label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  cursor: pointer;
+}
+
+.rating label:last-child {
+  position: static;
+}
+
+.rating label:nth-child(1) {
+  z-index: 5;
+}
+
+.rating label:nth-child(2) {
+  z-index: 4;
+}
+
+.rating label:nth-child(3) {
+  z-index: 3;
+}
+
+.rating label:nth-child(4) {
+  z-index: 2;
+}
+
+.rating label:nth-child(5) {
+  z-index: 1;
+}
+
+.rating label input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.rating label .icon {
+  float: left;
+  color: transparent;
+}
+
+.rating label:last-child .icon {
+  color: rgb(53, 50, 50);
+}
+
+.rating:not(:hover) label input:checked ~ .icon,
+.rating:hover label:hover input ~ .icon {
+  color: rgb(236, 236, 37);
+}
+
+.rating label input:focus:not(:checked) ~ .icon:last-child {
+  color: #000;
+  text-shadow: 0 0 5px rgb(5, 5, 4);
+}
+
+.wrapper {
+  margin: 0;
+  padding: 0 35px;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ .moviescarousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 12px);
+  gap: 16px;
+  /* overflow: hidden; */
+}
+
+.card .moviescarousel .moviesimg{
+  height: 342px;
+  list-style: none;
+  background: rgb(255, 255, 255);
+  border-radius: 8px;
+  display: flex;
+  padding-bottom: 15px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
