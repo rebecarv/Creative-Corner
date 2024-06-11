@@ -41,7 +41,7 @@
 .carousel__item {
   height: 500px;
   width: 500px;
-  background: rgb(246, 241, 244);
+  background: rgba(189, 185, 185, 0.882);
   padding: 1em;
   border-radius: 2%;
   font-family: "Quicksand", sans-serif;
