@@ -79,98 +79,32 @@
   background: rgba(112, 109, 109, 0.938);
 }
 
-.rating {
-  display: inline-block;
-  position: relative;
-  height: 50px;
-  line-height: 50px;
-  font-size: 50px;
+.gallery {
+  margin-top:2rem;
+  text-align: center;
 }
+.gallery > div {
+  columns:3;
+  gap:1.25rem;
+  padding-top:1.0rem;
+  padding: 2%;
+}
+.gallery img {
+  display:block;
+  width:100%;
+  margin-bottom:1.25rem;
+}
+@media (max-width:48rem) {
+  .gallery > div {
+    columns:2;
+   }
+ }
+ @media (max-width:32rem) {
+  .gallery > div {
+    columns:1;
+   }
+ }
 
-.rating label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  cursor: pointer;
-}
-
-.rating label:last-child {
-  position: static;
-}
-
-.rating label:nth-child(1) {
-  z-index: 5;
-}
-
-.rating label:nth-child(2) {
-  z-index: 4;
-}
-
-.rating label:nth-child(3) {
-  z-index: 3;
-}
-
-.rating label:nth-child(4) {
-  z-index: 2;
-}
-
-.rating label:nth-child(5) {
-  z-index: 1;
-}
-
-.rating label input {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-}
-
-.rating label .icon {
-  float: left;
-  color: transparent;
-}
-
-.rating label:last-child .icon {
-  color: rgb(53, 50, 50);
-}
-
-.rating:not(:hover) label input:checked ~ .icon,
-.rating:hover label:hover input ~ .icon {
-  color: rgb(236, 236, 37);
-}
-
-.rating label input:focus:not(:checked) ~ .icon:last-child {
-  color: #000;
-  text-shadow: 0 0 5px rgb(5, 5, 4);
-}
-
-.wrapper {
-  margin: 0;
-  padding: 0 35px;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
- .moviescarousel {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: calc((100% / 3) - 12px);
-  gap: 16px;
-  /* overflow: hidden; */
-}
-
-.card .moviescarousel .moviesimg{
-  height: 342px;
-  list-style: none;
-  background: rgb(255, 255, 255);
-  border-radius: 8px;
-  display: flex;
-  padding-bottom: 15px;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
+ #movie_quote {
+  font-style: italic;
+ }
