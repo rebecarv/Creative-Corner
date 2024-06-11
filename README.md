@@ -1,6 +1,4 @@
 # Favorites
-A website introducing me for a CS50x assignment 
+A simple HTML, CSS & JS website for a CS50x assignment. 
 
-
-Card hover interaction -- https://codepen.io/hexagoncircle/pen/XWbWKwL 
 
