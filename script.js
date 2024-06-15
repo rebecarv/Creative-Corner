@@ -1,4 +1,4 @@
-// Creative Corner Album
+// Creative Corner Slideshow
 document.addEventListener('DOMContentLoaded', () => {
   const quotes = document.querySelectorAll('.quote-item');
   let currentIndex = 0;
@@ -63,9 +63,3 @@ document.querySelectorAll(".carousel").forEach((carousel) => {
     nav.classList.toggle("open");
     btn.classList.toggle("is-active");
   }
-
-
-  // Stars rating
-  $(':radio').change(function() {
-    console.log('New star rating: ' + this.value);
-  });
