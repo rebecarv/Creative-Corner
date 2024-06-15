@@ -1,3 +1,24 @@
+// Creative Corner Album
+document.addEventListener('DOMContentLoaded', () => {
+  const quotes = document.querySelectorAll('.quote-item');
+  let currentIndex = 0;
+
+  function showQuote(index) {
+      quotes.forEach((quote, i) => {
+          quote.style.display = i === index ? 'block' : 'none';
+      });
+  }
+
+  function nextQuote() {
+      currentIndex = (currentIndex + 1) % quotes.length;
+      showQuote(currentIndex);
+  }
+
+  showQuote(currentIndex);
+  setInterval(nextQuote, 4000); // Change quote every 4 seconds
+});
+
+// Songs Page Carousel
 document.querySelectorAll(".carousel").forEach((carousel) => {
     const items = carousel.querySelectorAll(".carousel__item");
     const buttonsHtml = Array.from(items, () => {

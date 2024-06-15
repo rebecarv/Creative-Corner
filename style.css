@@ -72,6 +72,28 @@ header {
     text-align: center;
 }
 
+.content {
+  text-align: center;
+  padding: 15px;
+}
+
+.quote-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.quote-item {
+  margin: 20px;
+  text-align: center;
+}
+
+.quote-item img {
+  max-width: 300px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
 .carousel {
   max-width: fit-content;
   margin-left: auto;
